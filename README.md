@@ -1,6 +1,20 @@
 # blog
 build my own blog by Next.js and Tailwind CSS
 
+# Features to do
+- [ ] my own CMS
+- [ ] post can be corrected by ChatGPT, can auto generate tag
+- [ ] PV statistics
+- [ ] ...
+
+# content design
+- Home
+- Posts
+- Tools
+- Learning
+- About
+
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
