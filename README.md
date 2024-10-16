@@ -12,6 +12,7 @@ build my own blog by Next.js and Tailwind CSS
 - Posts
 - Tools
 - Learning
+- Tags
 - About
 
 
