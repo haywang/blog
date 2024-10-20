@@ -1,5 +1,6 @@
 const siteMeta = {
   title: "Austin's Blog",
+  headerTitle: "Austin's Blog",
   author: "Austin",
   description: "something about frontend",
   email: "test@gmail.com",

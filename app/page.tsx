@@ -1,5 +1,5 @@
 // pages/index.tsx
-import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
 import Footer from '@/components/Footer'
 
 const posts = Array.from({ length: 15 }, (_, i) => ({
@@ -10,7 +10,7 @@ const posts = Array.from({ length: 15 }, (_, i) => ({
 const Home = () => {
   return (
     <div>
-      <Navbar />
+      <Header />
       <main className="container mx-auto p-4">
         <h1 className="text-2xl font-bold mb-4">Blog Articles</h1>
         <ul>
