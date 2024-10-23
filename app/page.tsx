@@ -1,18 +1,18 @@
 // pages/index.tsx
-import Header from "@/components/Header";
+import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 const posts = Array.from({ length: 15 }, (_, i) => ({
   title: `Article ${i + 1}`,
-  excerpt: `This is a summary of article ${i + 1}.`,
-}));
+  excerpt: `This is a summary of article ${i + 1}.`
+}))
 
 const Home = () => {
   return (
     <div>
       <Header />
       <main className="container mx-auto p-4">
-        <h1 className="text-2xl font-bold mb-4">Blog Articles</h1>
+        <h1 className="mb-4 text-2xl font-bold">Blog Articles</h1>
         <ul>
           {posts.slice(0, 10).map((post, index) => (
             <li key={index} className="mb-4">
@@ -22,18 +22,18 @@ const Home = () => {
           ))}
         </ul>
         {/* Pagination */}
-        <div className="flex justify-center mt-4">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded">
+        <div className="mt-4 flex justify-center">
+          <button className="rounded bg-blue-500 px-4 py-2 text-white">
             Load More
           </button>
         </div>
       </main>
-            <Footer />
+      <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
 
 // import Image from "next/image";
 // import Link from "next/link";

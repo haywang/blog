@@ -1,18 +1,17 @@
 // components/Header.tsx
 import siteMeta from '@/data/siteMeta'
-import Link from "next/link";
+import Link from 'next/link'
 // import Logo from '@/data/logo.svg'
 import headerNavLinks from '@/data/headerNavLinks'
 
-const Header = () =>{
-  const headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10'
+const Header = () => {
+  const headerClass =
+    'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10'
   return (
     <header className={headerClass}>
       <Link href="/" aria-label={siteMeta.headerTitle}>
         <div className="flex items-center justify-between">
-          <div className="mr-3">
-            {/* <Logo /> */}
-          </div>
+          <div className="mr-3">{/* <Logo /> */}</div>
         </div>
       </Link>
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
@@ -23,7 +22,7 @@ const Header = () =>{
               <Link
                 key={link.title}
                 href={link.href}
-                className="block font-medium text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+                className="hover:text-primary-500 dark:hover:text-primary-400 block font-medium text-gray-900 dark:text-gray-100"
               >
                 {link.title}
               </Link>
@@ -34,7 +33,7 @@ const Header = () =>{
         <MobileNav /> */}
       </div>
     </header>
-  );
-};
+  )
+}
 
 export default Header
