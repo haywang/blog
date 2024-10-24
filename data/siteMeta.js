@@ -3,6 +3,7 @@ const siteMeta = {
   headerTitle: "Austin's Blog",
   author: 'Austin',
   description: 'something about frontend',
+  theme: 'system',
   email: 'test@gmail.com',
   github: 'https://github.com/haywang',
   x: 'https://x.com',
