@@ -6,10 +6,10 @@ export default ({
   href,
   ...rest
 }: LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>) => {
-  const isIntrnalLink = href && href.startsWith('/')
+  const isInternalLink = href && href.startsWith('/')
   const isAnchorLink = href && href.startsWith('#')
 
-  if (isIntrnalLink) {
+  if (isInternalLink) {
     return <Link className="break-words" href={href} {...rest} />
   }
 

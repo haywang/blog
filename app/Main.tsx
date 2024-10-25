@@ -1,6 +1,6 @@
 import ListLayout from '@/layouts/ListLayout'
 
-const POSTS_PER_PAGE = 10
+const POSTS_PER_PAGE = 2
 
 export default function Home({ posts }) {
   const pageNumber = 1
