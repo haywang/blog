@@ -1,4 +1,6 @@
 // pages/index.tsx
+import Main from './Main'
 export default function Page() {
-  return <h1>Home page</h1>
+  const posts = [{}, {}, {}]
+  return <Main posts={posts} />
 }
