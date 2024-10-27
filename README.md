@@ -1,6 +1,10 @@
 # blog
 build my own blog by Next.js and Tailwind CSS
 
+# Project settings
+- [x] prettier
+- [ ] lint-staged
+
 # Features to do
 - [ ] my own CMS
 - [ ] post can be corrected by ChatGPT, can auto generate tag

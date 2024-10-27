@@ -10,10 +10,11 @@ export default function NotFound() {
       </div>
       <div className="max-w-md">
         <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
-          Sorry we couldn't find this page.
+          Sorry we couldn&#39;t find this page.
         </p>
         <p className="mb-8">
-          But don't worry, you can find plenty of other things on our homepage.
+          But don&#39;t worry, you can find plenty of other things on our
+          homepage.
         </p>
         <Link
           href="/"

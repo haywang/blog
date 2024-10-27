@@ -1,4 +1,4 @@
-import localFont from 'next/font/local'
+// import localFont from 'next/font/local'
 import './globals.css'
 import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'

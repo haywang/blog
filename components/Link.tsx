@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { LinkProps } from 'next/link'
 import { AnchorHTMLAttributes } from 'react'
 
-export default ({
+const CustomLink = ({
   href,
   ...rest
 }: LinkProps & AnchorHTMLAttributes<HTMLAnchorElement>) => {
@@ -27,3 +27,5 @@ export default ({
     />
   )
 }
+
+export default CustomLink
