@@ -5,6 +5,11 @@ build my own blog by Next.js and Tailwind CSS
 - [x] prettier
 - [ ] lint-staged
 
+# Bugs
+- [ ] logo can't show normally
+- [ ] social-icon same to logo
+- [ ] font-size can't display as expect
+
 # Features to do
 - [ ] my own CMS
 - [ ] post can be corrected by ChatGPT, can auto generate tag
