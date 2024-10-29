@@ -3,7 +3,7 @@ build my own blog by Next.js and Tailwind CSS
 
 # Project settings
 - [x] prettier
-- [ ] lint-staged
+- [x] husky && lint-staged
 
 # Bugs
 - [ ] logo can't show normally
