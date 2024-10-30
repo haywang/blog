@@ -8,7 +8,7 @@ build my own blog by Next.js and Tailwind CSS
 # Bugs
 - [ ] logo can't show normally
 - [ ] social-icon same to logo
-- [ ] font-size can't display as expect
+- [x] font-size can't display as expect. tailwind.config.ts' content add include directory
 
 # Features to do
 - [ ] my own CMS
