@@ -2,17 +2,20 @@
 
 import Link from '@/components/Link'
 import { usePathname } from 'next/navigation'
+import { CoreContent } from 'pliny/utils/contentlayer'
+import type { Blog } from 'contentlayer/generated'
 
 interface PaginationProps {
   totalPages: number
   currentPage: number
 }
 
-// interface ListLayoutProps {
-//   posts:
-//   title: string
-//   initialDisplayPosts:
-// }
+interface ListLayoutProps {
+  posts: CoreContent<Blog>[]
+  title: string
+  initialDisplayPosts?: CoreContent<Blog>[]
+  pagination: PaginationProps
+}
 function Pagination({ totalPages, currentPage }: PaginationProps) {
   const isHavePrevPage = currentPage - 1 > 0
   const isHaveNextPage = currentPage + 1 <= totalPages
@@ -72,11 +75,16 @@ export default function ListLayout({
     initialDisplayPosts.length > 0 ? initialDisplayPosts : posts
   return (
     <>
+      <div className="pb-6 pt-6">
+        <h1 className="md:leading-14 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:hidden sm:text-4xl sm:leading-10 md:text-6xl dark:text-gray-100">
+          {title}
+        </h1>
+      </div>
       <div className="flex sm:space-x-24">
         <div>
           <ul>
             {displayPosts.map((post) => {
-              const { path, date, title, summary, tags } = post
+              const { path, date, title, summary } = post // , tags
               return (
                 <li key={path} className="py-5">
                   <article className="flex flex-col space-y-2 xl:space-y-0">
