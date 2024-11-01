@@ -1,5 +1,8 @@
 // pages/index.tsx
 import Main from './Main'
+// import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
+// import { allBlogs } from 'contentlayer/generated'
+
 export default function Page() {
   // Mock
   const posts = [
@@ -25,5 +28,6 @@ export default function Page() {
       tags: ['design', 'blog']
     }
   ]
+  // const posts = allCoreContent(sortPosts(allBlogs))
   return <Main posts={posts} />
 }

@@ -1,9 +1,12 @@
 'use client'
 
 import Link from '@/components/Link'
+import Tag from '@/components/Tag'
 import { usePathname } from 'next/navigation'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
+import { formatDate } from 'pliny/utils/formatDate'
+import siteMeta from '@/data/siteMeta'
 
 interface PaginationProps {
   totalPages: number
@@ -84,7 +87,7 @@ export default function ListLayout({
         <div>
           <ul>
             {displayPosts.map((post) => {
-              const { path, date, title, summary } = post // , tags
+              const { path, date, title, summary, tags } = post //
               return (
                 <li key={path} className="py-5">
                   <article className="flex flex-col space-y-2 xl:space-y-0">
@@ -93,8 +96,7 @@ export default function ListLayout({
                       <dt className="sr-only">Published on</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={date} suppressHydrationWarning>
-                          {/* {formatDate(date, siteMetadata.locale)} */}
-                          {date}
+                          {formatDate(date, siteMeta.locale)}
                         </time>
                       </dd>
                     </dl>
@@ -109,7 +111,7 @@ export default function ListLayout({
                           </Link>
                         </h2>
                         <div className="flex flex-wrap">
-                          {/* {tags?.map((tag) => <Tag key={tag} text={tag} />)} */}
+                          {tags?.map((tag) => <Tag key={tag} text={tag} />)}
                         </div>
                       </div>
                       <div className="prose max-w-none text-gray-500 dark:text-gray-400">

@@ -9,7 +9,8 @@ const siteMeta = {
   x: 'https://x.com',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com'
+  linkedin: 'https://www.linkedin.com',
+  locale: 'en-US'
 }
 
 module.exports = siteMeta
