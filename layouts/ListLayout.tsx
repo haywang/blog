@@ -17,7 +17,7 @@ interface ListLayoutProps {
   posts: CoreContent<Blog>[]
   title: string
   initialDisplayPosts?: CoreContent<Blog>[]
-  pagination: PaginationProps
+  pagination?: PaginationProps
 }
 function Pagination({ totalPages, currentPage }: PaginationProps) {
   const isHavePrevPage = currentPage - 1 > 0
@@ -71,7 +71,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
 export default function ListLayout({
   posts,
   title,
-  initialDisplayPosts,
+  initialDisplayPosts = [],
   pagination
 }: ListLayoutProps) {
   const displayPosts =
