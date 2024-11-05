@@ -4,3 +4,4 @@ pnpm-lock.yaml
 .prettierignore
 public/*
 README.md
+app/tag-data.json

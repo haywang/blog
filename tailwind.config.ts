@@ -8,7 +8,8 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './layouts/**/*.{js,ts,jsx,tsx,mdx}',
-    './data/**/*.mdx'
+    './data/**/*.mdx',
+    './node_modules/pliny/**/*.js'
   ],
   theme: {
     extend: {
