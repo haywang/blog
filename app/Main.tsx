@@ -2,7 +2,19 @@ import ListLayout from '@/layouts/ListLayout'
 
 const POSTS_PER_PAGE = 2
 
-export default function Home({ posts }) {
+interface PostProps {
+  path: string
+  date: string
+  title: string
+  summary: string
+  tags: string[]
+}
+
+interface PostsProps {
+  posts: PostProps[]
+}
+
+export default function Home({ posts }: PostsProps) {
   const pageNumber = 1
   const initialDisplayPosts = posts.slice(
     POSTS_PER_PAGE * (pageNumber - 1),
