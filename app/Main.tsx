@@ -1,17 +1,10 @@
 import ListLayout from '@/layouts/ListLayout'
+import { CoreContent } from 'pliny/utils/contentlayer'
+import type { Blog } from 'contentlayer/generated'
 
 const POSTS_PER_PAGE = 2
-
-interface PostProps {
-  path: string
-  date: string
-  title: string
-  summary: string
-  tags: string[]
-}
-
 interface PostsProps {
-  posts: PostProps[]
+  posts: CoreContent<Blog>[]
 }
 
 export default function Home({ posts }: PostsProps) {
