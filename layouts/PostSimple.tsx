@@ -6,7 +6,7 @@ import Link from '@/components/Link'
 import SectionContainer from '@/components/SectionContainer'
 import siteMeta from '@/data/siteMeta'
 // import Comments from '@/components/Comments'
-// import PageTitle from '@/components/PageTitle'
+import PageTitle from '@/components/PageTitle'
 // import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
 interface LayoutProps {
@@ -25,7 +25,27 @@ export default function PostLayout({
   const { path, slug, date, title } = content
   return (
     <SectionContainer>
-      <article>Post</article>
+      <article>
+        <div>
+          <header>
+            <div className="space-y-1 border-b border-gray-200 pb-10 text-center dark:border-gray-700">
+              <dl>
+                <div>
+                  <dt className="sr-only">Published on</dt>
+                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                    <time dateTime={date}>
+                      {formatDate(date, siteMeta.locale)}
+                    </time>
+                  </dd>
+                </div>
+              </dl>
+              <div>
+                <PageTitle>{title}</PageTitle>
+              </div>
+            </div>
+          </header>
+        </div>
+      </article>
     </SectionContainer>
   )
 }
