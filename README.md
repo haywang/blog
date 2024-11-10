@@ -6,8 +6,8 @@ build my own blog by Next.js and Tailwind CSS
 - [x] husky && lint-staged
 
 # Bugs
-- [ ] logo can't show normally
-- [ ] social-icon same to logo
+- [x] logo can't show normally
+- [x] social-icon same to logo
 - [x] font-size can't display as expect. tailwind.config.ts' content add include directory
 
 # Features to do

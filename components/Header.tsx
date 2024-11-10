@@ -1,7 +1,7 @@
 // components/Header.tsx
 import siteMeta from '@/data/siteMeta'
 import Link from 'next/link'
-// import Logo from '@/data/logo.svg'
+import Logo from '@/data/logo.svg'
 import headerNavLinks from '@/data/headerNavLinks'
 
 const Header = () => {
@@ -11,7 +11,9 @@ const Header = () => {
     <header className={headerClass}>
       <Link href="/" aria-label={siteMeta.headerTitle}>
         <div className="flex items-center justify-between">
-          <div className="mr-3">{/* <Logo /> */}</div>
+          <div className="mr-3">
+            <Logo />
+          </div>
         </div>
       </Link>
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
