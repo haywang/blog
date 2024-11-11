@@ -5,7 +5,7 @@ import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/Link'
 import SectionContainer from '@/components/SectionContainer'
 import siteMeta from '@/data/siteMeta'
-// import Comments from '@/components/Comments'
+import Comments from '@/components/Comments'
 import PageTitle from '@/components/PageTitle'
 // import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
@@ -44,6 +44,21 @@ export default function PostLayout({
               </div>
             </div>
           </header>
+          <div className="grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8 xl:divide-y-0 dark:divide-gray-700">
+            <div className="divide-y divide-gray-200 xl:col-span-3 xl:row-span-2 xl:pb-0 dark:divide-gray-700">
+              <div className="prose dark:prose-invert max-w-none pb-8 pt-10">
+                {children}
+              </div>
+            </div>
+            {siteMeta.comments && (
+              <div
+                className="pb-6 pt-6 text-center text-gray-700 dark:text-gray-300"
+                id="comment"
+              >
+                <Comments slug={slug} />
+              </div>
+            )}
+          </div>
         </div>
       </article>
     </SectionContainer>
