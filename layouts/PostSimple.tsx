@@ -23,6 +23,7 @@ export default function PostLayout({
   pre
 }: LayoutProps) {
   const { path, slug, date, title } = content
+  console.log(pre, next, path)
   return (
     <SectionContainer>
       <article>
@@ -58,6 +59,32 @@ export default function PostLayout({
                 <Comments slug={slug} />
               </div>
             )}
+            <footer>
+              <div className="flex flex-col text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
+                {pre && pre.path && (
+                  <div className="pt-4 xl:pt-8">
+                    <Link
+                      href={`/${pre.path}`}
+                      className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                      aria-label={`Previous post: ${pre.title}`}
+                    >
+                      &larr; {pre.title}
+                    </Link>
+                  </div>
+                )}
+                {next && next.path && (
+                  <div className="pt-4 xl:pt-8">
+                    <Link
+                      href={`/${next.path}`}
+                      className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                      aria-label={`Next post: ${next.title}`}
+                    >
+                      {next.title} &rarr;
+                    </Link>
+                  </div>
+                )}
+              </div>
+            </footer>
           </div>
         </div>
       </article>

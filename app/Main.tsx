@@ -2,7 +2,7 @@ import ListLayout from '@/layouts/ListLayout'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
 
-const POSTS_PER_PAGE = 2
+const POSTS_PER_PAGE = 10
 interface PostsProps {
   posts: CoreContent<Blog>[]
 }

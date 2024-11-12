@@ -8,7 +8,7 @@ import {
 import { allBlogs, allAuthors } from 'contentlayer/generated'
 import type { Authors, Blog } from 'contentlayer/generated'
 import PostSimple from '@/layouts/PostSimple'
-import siteMeta from '@/data/siteMeta'
+// import siteMeta from '@/data/siteMeta'
 import { notFound } from 'next/navigation'
 
 const defaultLayout = 'PostSimple'
