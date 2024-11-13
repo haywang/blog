@@ -7,7 +7,7 @@ import SectionContainer from '@/components/SectionContainer'
 import siteMeta from '@/data/siteMeta'
 import Comments from '@/components/Comments'
 import PageTitle from '@/components/PageTitle'
-// import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
 interface LayoutProps {
   content: CoreContent<Blog>
@@ -26,6 +26,7 @@ export default function PostLayout({
   console.log(pre, next, path)
   return (
     <SectionContainer>
+      <ScrollTopAndComment />
       <article>
         <div>
           <header>
