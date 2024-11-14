@@ -1,6 +1,6 @@
 'use client'
 
-import { Comments as CommentsComponent } from 'pliny/comments'
+import { Comments as CommentsComponent, CommentsConfig } from 'pliny/comments'
 import { useState } from 'react'
 import siteMeta from '@/data/siteMeta'
 
@@ -12,7 +12,10 @@ export default function Comments({ slug }: { slug: string }) {
   return (
     <>
       {loadComments ? (
-        <CommentsComponent commentsConfig={siteMeta.comments} slug={slug} />
+        <CommentsComponent
+          commentsConfig={siteMeta.comments as CommentsConfig}
+          slug={slug}
+        />
       ) : (
         <button onClick={() => setLoadComments(true)}>Load Comments</button>
       )}
