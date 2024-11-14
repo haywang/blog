@@ -4,12 +4,12 @@ const siteMeta = {
   author: 'Austin',
   description: 'something about frontend',
   theme: 'system',
-  email: 'test@gmail.com',
+  email: 'YXV0aW5mZUBwcm90b24ubWU=',
   github: 'https://github.com/haywang',
-  x: 'https://x.com',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  x: 'https://x.com/haywang2',
+  facebook: '',
+  youtube: '',
+  linkedin: '',
   locale: 'en-US',
   comments: {
     // If you want to use an analytics provider you have to add it to the
