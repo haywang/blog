@@ -4,7 +4,7 @@ const siteMeta = {
   author: 'Austin',
   description: 'something about frontend',
   theme: 'system',
-  email: 'YXV0aW5mZUBwcm90b24ubWU=',
+  email: 'base64decode:YXV0aW5mZUBwcm90b24ubWU=',
   github: 'https://github.com/haywang',
   x: 'https://x.com/haywang2',
   facebook: '',
