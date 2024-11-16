@@ -1,8 +1,9 @@
 // components/Header.tsx
 import siteMeta from '@/data/siteMeta'
 import Link from 'next/link'
-import Logo from '@/data/logo.svg'
 import headerNavLinks from '@/data/headerNavLinks'
+import logo from '@/data/logo.jpg'
+import Image from 'next/image'
 
 const Header = () => {
   const headerClass =
@@ -12,7 +13,13 @@ const Header = () => {
       <Link href="/" aria-label={siteMeta.headerTitle}>
         <div className="flex items-center justify-between">
           <div className="mr-3">
-            <Logo />
+            <Image
+              src={logo}
+              alt="logo"
+              // width={192}
+              // height={192}
+              className="h-12 w-12 rounded-full"
+            />
           </div>
         </div>
       </Link>
