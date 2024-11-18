@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* subtitle front link style */
 .content-header-link {
   opacity: 0;
   margin-left: -24px;
