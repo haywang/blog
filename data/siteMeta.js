@@ -10,6 +10,7 @@ const siteMeta = {
   facebook: '',
   youtube: '',
   linkedin: '',
+  language: 'en-us',
   locale: 'en-US',
   comments: {
     // If you want to use an analytics provider you have to add it to the
