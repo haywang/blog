@@ -2,7 +2,6 @@
 
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
-import { usePathname } from 'next/navigation'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
 import { formatDate } from 'pliny/utils/formatDate'
@@ -22,8 +21,7 @@ interface ListLayoutProps {
 function Pagination({ totalPages, currentPage }: PaginationProps) {
   const isHavePrevPage = currentPage - 1 > 0
   const isHaveNextPage = currentPage + 1 <= totalPages
-  const pathName = usePathname()
-  const basePath = pathName.split('/')[1]
+  const basePath = '/blog/page/'
   return (
     <div className="space-y-2 pb-8 pt-6 md:space-y-5">
       <nav className="flex justify-between">
@@ -36,14 +34,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
           </button>
         )}
         {isHavePrevPage && (
-          <Link
-            href={
-              currentPage - 1 === 1
-                ? `/${basePath}/`
-                : `${basePath}/page/${currentPage - 1}`
-            }
-            rel="prev"
-          >
+          <Link href={`${basePath}${currentPage - 1}`} rel="prev">
             Previous
           </Link>
         )}
@@ -59,7 +50,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
           </button>
         )}
         {isHaveNextPage && (
-          <Link href={`/${basePath}/page/${currentPage + 1}`} rel="next">
+          <Link href={`${basePath}${currentPage + 1}`} rel="next">
             Next
           </Link>
         )}
@@ -79,7 +70,7 @@ export default function ListLayout({
   return (
     <>
       <div className="pb-6 pt-6">
-        <h1 className="md:leading-14 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:hidden sm:text-4xl sm:leading-10 md:text-6xl dark:text-gray-100">
+        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:hidden sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
           {title}
         </h1>
       </div>

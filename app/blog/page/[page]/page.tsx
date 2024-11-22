@@ -1,13 +1,14 @@
 import ListLayout from '@/layouts/ListLayout'
-import { CoreContent } from 'pliny/utils/contentlayer'
-import type { Blog } from 'contentlayer/generated'
+import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
+import { allBlogs } from 'contentlayer/generated'
 import POSTS_PER_PAGE from '@/data/pageNumber'
-interface PostsProps {
-  posts: CoreContent<Blog>[]
-}
 
-export default function Home({ posts }: PostsProps) {
-  const pageNumber = 1
+export default async function Page(props: {
+  params: Promise<{ page: string }>
+}) {
+  const params = await props.params
+  const posts = allCoreContent(sortPosts(allBlogs))
+  const pageNumber = parseInt(params.page as string)
   const initialDisplayPosts = posts.slice(
     POSTS_PER_PAGE * (pageNumber - 1),
     POSTS_PER_PAGE * pageNumber
@@ -16,6 +17,7 @@ export default function Home({ posts }: PostsProps) {
     currentPage: pageNumber,
     totalPages: Math.ceil(posts.length / POSTS_PER_PAGE)
   }
+
   return (
     <ListLayout
       posts={posts}
