@@ -2,7 +2,7 @@
 import siteMeta from '@/data/siteMeta'
 import Link from 'next/link'
 import headerNavLinks from '@/data/headerNavLinks'
-import logo from '@/data/logo.jpg'
+import logo from '@/data/logo.png'
 import Image from 'next/image'
 
 const Header = () => {
@@ -29,7 +29,7 @@ const Header = () => {
             <Link
               key={link.title}
               href={link.href}
-              className="block font-medium text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+              className="hover:text-primary-500 dark:hover:text-primary-400 block font-medium text-gray-900 dark:text-gray-100"
             >
               {link.title}
             </Link>

@@ -23,7 +23,7 @@ const config: Config = {
         sans: ['var(--font-space-grotesk)', ...fontFamily.sans]
       },
       colors: {
-        primary: colors.pink,
+        primary: '#509AD8',
         gray: colors.gray
       },
       zIndex: {
