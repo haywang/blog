@@ -1,4 +1,9 @@
-export default function Loading() {
-  // You can add any UI inside Loading, including a Skeleton.
-  return <div>Loading</div>
+const Loading = () => {
+  return (
+    <div className="flex h-screen items-center justify-center bg-white">
+      <div className="h-16 w-16 animate-spin rounded-full border-4 border-gray-200 border-t-blue-500 shadow-lg"></div>
+    </div>
+  )
 }
+
+export default Loading
