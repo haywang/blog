@@ -41,6 +41,11 @@ const siteMeta = {
       // This corresponds to the `data-lang="en"` in giscus's configurations
       lang: 'en'
     }
+  },
+  analytics: {
+    googleAnalytics: {
+      googleAnalyticsId: 'G-CM8LEM9N6W' // e.g. G-XXXXXXX
+    }
   }
 }
 

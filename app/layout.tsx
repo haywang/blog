@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import { ThemeProviders } from './theme-providers'
 import { Space_Grotesk } from 'next/font/google'
 import siteMeta from '@/data/siteMeta'
+import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -57,9 +58,7 @@ export default function RootLayout({
       />
       <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
-          {/* <Analytics
-            analyticsConfig={siteMetadata.analytics as AnalyticsConfig}
-          /> */}
+          <Analytics analyticsConfig={siteMeta.analytics as AnalyticsConfig} />
           <SectionContainer>
             {/* <SearchProvider searchConfig={siteMetadata.search as SearchConfig}> */}
             <Header />
