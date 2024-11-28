@@ -12,6 +12,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
     "@next/bundle-analyzer": "^15.0.2",
     "contentlayer2": "^0.5.3",
     "github-slugger": "^2.0.0",

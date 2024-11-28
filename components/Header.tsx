@@ -4,6 +4,7 @@ import Link from 'next/link'
 import headerNavLinks from '@/data/headerNavLinks'
 import logo from '@/data/logo.png'
 import Image from 'next/image'
+import ThemeSwitch from './ThemeSwitch'
 
 const Header = () => {
   const headerClass =
@@ -35,9 +36,9 @@ const Header = () => {
             </Link>
           ))}
         </div>
-        {/* <SearchButton />
+        {/* <SearchButton /> */}
         <ThemeSwitch />
-        <MobileNav /> */}
+        {/* <MobileNav /> */}
       </div>
     </header>
   )
