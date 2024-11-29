@@ -5,16 +5,16 @@ import { useTheme } from 'next-themes'
 import {
   Menu,
   MenuItems,
-  //   MenuItem,
+  MenuItem,
   MenuButton,
   RadioGroup,
-  //   Option,
+  Radio,
   Transition
 } from '@headlessui/react'
 
 import Sun from '@/data/sun.svg'
 import Moon from '@/data/moon.svg'
-// import Monitor from '@/data/monitor.svg'
+import Monitor from '@/data/monitor.svg'
 
 const Blank = () => <svg className="h-6 w-6" />
 
@@ -54,48 +54,48 @@ const ThemeSwitch = () => {
         >
           <MenuItems className="absolute right-0 z-50 mt-2 w-32 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-gray-800">
             <RadioGroup value={theme} onChange={setTheme}>
-              {/* <Option value="light">
+              <Radio value="light">
                 <MenuItem>
                   {({ focus }) => (
                     <button
                       className={`${focus ? 'bg-primary-600 text-white' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                     >
                       <div className="mr-2">
-                        <Sun />
+                        <Sun className="group:hover:text-gray-100 h-6 w-6" />
                       </div>
                       Light
                     </button>
                   )}
                 </MenuItem>
-              </Option>
-              <Option value="dark">
+              </Radio>
+              <Radio value="dark">
                 <MenuItem>
                   {({ focus }) => (
                     <button
                       className={`${focus ? 'bg-primary-600 text-white' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                     >
                       <div className="mr-2">
-                        <Moon />
+                        <Moon className="group:hover:text-gray-100 h-6 w-6" />
                       </div>
                       Dark
                     </button>
                   )}
                 </MenuItem>
-              </Option>
-              <Option value="system">
+              </Radio>
+              <Radio value="system">
                 <MenuItem>
                   {({ focus }) => (
                     <button
                       className={`${focus ? 'bg-primary-600 text-white' : ''} group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                     >
                       <div className="mr-2">
-                        <Monitor />
+                        <Monitor className="group:hover:text-gray-100 h-6 w-6" />
                       </div>
                       System
                     </button>
                   )}
                 </MenuItem>
-              </Option> */}
+              </Radio>
             </RadioGroup>
           </MenuItems>
         </Transition>
