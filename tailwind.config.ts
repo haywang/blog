@@ -11,6 +11,7 @@ const config: Config = {
     './data/**/*.mdx',
     './node_modules/pliny/**/*.js'
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       lineHeight: {

@@ -9,8 +9,8 @@ build my own blog by Next.js and Tailwind CSS
 - [x] logo can't show normally
 - [x] social-icon same to logo
 - [x] font-size can't display as expect. tailwind.config.ts' content add include directory
-- [ ] primary color not show normally
-- [ ] theme can't switch normally
+- [x] primary color not show normally
+- [x] theme can't switch normally
 
 # Features to do
 - [ ] tag layout

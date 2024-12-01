@@ -27,7 +27,7 @@ const ThemeSwitch = () => {
   return (
     <div className="mr-5 flex items-center">
       <Menu as="div" className="relative inline-block text-left">
-        <div className="hover:text-primary-500 dark:hover:text-primary-400 flex items-center justify-center">
+        <div className="flex items-center justify-center hover:text-primary-500 dark:hover:text-primary-400">
           <MenuButton
             aria-label="Theme switcher"
             className="group:hover:text-gray-100 h-6 w-6"
@@ -53,7 +53,6 @@ const ThemeSwitch = () => {
           leaveTo="transform opacity-0 scale-95"
         >
           <MenuItems className="absolute right-0 z-50 mt-2 w-32 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-gray-800">
-            The current theme is: {theme}
             <RadioGroup value={theme} onChange={setTheme}>
               <Radio value="light">
                 <MenuItem>

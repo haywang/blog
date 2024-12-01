@@ -48,7 +48,7 @@ export default function RootLayout({
       />
       <meta
         name="theme-color"
-        media="(prefers-color-schme: light)"
+        media="(prefers-color-scheme: light)"
         content="#fff"
       />
       <meta
