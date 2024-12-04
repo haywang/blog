@@ -1,8 +1,13 @@
+const BASE_PATH = process.env.BASE_PATH || ''
+
 const siteMeta = {
   title: "Austin's Blog",
+  description:
+    "This is Austin's blog, share frontend development|career|personal ideas",
+  siteUrl: 'https://www.austinfe.com',
+  socialBanner: `${BASE_PATH}/static/images/logo.png`,
   headerTitle: "Austin's Blog",
   author: 'Austin',
-  description: 'something about frontend',
   theme: 'system',
   email: 'base64decode:YXV0aW5mZUBwcm90b24ubWU=',
   github: 'https://github.com/haywang',

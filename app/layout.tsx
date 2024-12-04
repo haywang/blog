@@ -6,6 +6,37 @@ import { ThemeProviders } from './theme-providers'
 import { Space_Grotesk } from 'next/font/google'
 import siteMeta from '@/data/siteMeta'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
+import type { Metadata } from 'next'
+
+// add meta info for SEO
+export const metadata: Metadata = {
+  title: siteMeta.title,
+  description: siteMeta.description,
+  metadataBase: new URL(siteMeta.siteUrl),
+  openGraph: {
+    title: siteMeta.title,
+    description: siteMeta.description,
+    url: './',
+    siteName: siteMeta.title,
+    images: [siteMeta.socialBanner]
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  },
+  twitter: {
+    title: siteMeta.title,
+    card: 'summary_large_image',
+    images: [siteMeta.socialBanner]
+  }
+}
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
