@@ -20,6 +20,7 @@ export default function Home({ posts }: PostsProps) {
     <ListLayout
       posts={posts}
       initialDisplayPosts={initialDisplayPosts}
+      isShowTag={false}
       pagination={pagination}
       title="All Posts"
     />

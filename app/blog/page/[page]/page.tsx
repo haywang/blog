@@ -22,6 +22,7 @@ export default async function Page(props: {
     <ListLayout
       posts={posts}
       initialDisplayPosts={initialDisplayPosts}
+      isShowTag={false}
       pagination={pagination}
       title="All Posts"
     />

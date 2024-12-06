@@ -15,11 +15,10 @@ export default function TagPage({ params }: { params: { tag: string } }) {
       )
     )
   )
-  console.warn(title, filteredPosts)
 
   if (filteredPosts.length === 0) {
     return notFound()
   }
 
-  return <ListLayout posts={filteredPosts} title={title} />
+  return <ListLayout posts={filteredPosts} title={title} isShowTag={true} />
 }
