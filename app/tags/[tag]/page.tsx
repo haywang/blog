@@ -7,12 +7,15 @@ import { notFound } from 'next/navigation'
 
 export default function TagPage({ params }: { params: { tag: string } }) {
   const tag = decodeURI(params.tag)
-  const title = tag[0].toUpperCase + tag.split(' ').join('-').slice(1)
+  // first letter to UpperCase, replace space to '-'
+  const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
   const filteredPosts = allCoreContent(
     sortPosts(
-      allBlogs.filter(
-        (post) => post.tags && post.tags.map((t) => slug(t).includes(tag))
-      )
+      allBlogs.filter((post) => {
+        const tags = post.tags.map((t) => slug(t))
+        console.log('filter tag->', tags)
+        return post.tags && tags.includes(tag)
+      })
     )
   )
 
