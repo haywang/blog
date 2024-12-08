@@ -7,7 +7,6 @@ import AuthorLayout from '@/layouts/AuthorLayout'
 export default function Page() {
   const author = allAuthors.find((p) => p.slug === 'default') as Authors
   const mainContent = coreContent(author)
-  // console.error(mainContent)
   return (
     <>
       <AuthorLayout content={mainContent}>

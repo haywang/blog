@@ -13,7 +13,6 @@ export default function TagPage({ params }: { params: { tag: string } }) {
     sortPosts(
       allBlogs.filter((post) => {
         const tags = post.tags.map((t) => slug(t))
-        console.log('filter tag->', tags)
         return post.tags && tags.includes(tag)
       })
     )

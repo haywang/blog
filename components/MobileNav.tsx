@@ -25,13 +25,10 @@ const MobileNav = () => {
   const navRef = useRef(null)
 
   const onToggleNav = () => {
-    console.warn('into toggle nav handle')
     setNavShow((status) => {
       if (status) {
-        console.warn('hidden')
         enableBodyScroll(navRef.current)
       } else {
-        console.warn('show')
         disableBodyScroll(navRef.current)
       }
       return !status
