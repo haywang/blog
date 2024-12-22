@@ -10,7 +10,10 @@ import type { Metadata } from 'next'
 
 // add meta info for SEO
 export const metadata: Metadata = {
-  title: siteMeta.title,
+  title: {
+    default: siteMeta.title,
+    template: `%s | ${siteMeta.title}`
+  },
   description: siteMeta.description,
   metadataBase: new URL(siteMeta.siteUrl),
   openGraph: {
