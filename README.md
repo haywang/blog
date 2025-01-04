@@ -11,6 +11,8 @@ build my own blog by Next.js and Tailwind CSS
 - [x] font-size can't display as expect. tailwind.config.ts' content add include directory
 - [x] primary color not show normally
 - [x] theme can't switch normally
+- [ ] google search console show: Page with redirect, 3 pages
+- [ ] Discovered - currently not indexed, 8 pages
 
 # Features to do
 - [ ] tag layout
