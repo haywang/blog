@@ -15,11 +15,11 @@ build my own blog by Next.js and Tailwind CSS
 - [ ] Discovered - currently not indexed, 8 pages
 
 # Features to do
-- [ ] tag layout
-- [ ] mobile nav component
+- [x] tag layout
+- [x] mobile nav component
 - [ ] my own CMS
 - [ ] post can be corrected by ChatGPT, can auto generate tag
-- [ ] PV statistics
+- [x] PV statistics
 - [ ] ...
 
 # content design

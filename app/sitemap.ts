@@ -16,10 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: post.lastmod || post.date
     }))
 
-  const routes = headerNavLinks.map((route) => ({
-    url: `${siteUrl}${route.href}`,
-    lastModified: new Date().toISOString().split('T')[0]
-  }))
+  const routes = headerNavLinks
+    .filter((route) => !route.href.includes('http')) // External link don't generate sitemap
+    .map((route) => ({
+      url: `${siteUrl}${route.href}`,
+      lastModified: new Date().toISOString().split('T')[0]
+    }))
 
   return [...routes, ...blogRoutes]
 }
