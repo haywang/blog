@@ -20,6 +20,7 @@ build my own blog by Next.js and Tailwind CSS
 - [ ] my own CMS
 - [ ] post can be corrected by ChatGPT, can auto generate tag
 - [x] PV statistics
+- [ ] other detail to optimize, mainly about the Next's features
 - [ ] ...
 
 # content design
