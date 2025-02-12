@@ -1,5 +1,5 @@
 # blog
-build my own blog by Next.js and Tailwind CSS
+build my own blog by Next.js and Tailwind CSS, The online link is: [-> Blog Link](https://www.austinfe.com/)
 
 # Project settings
 - [x] prettier
@@ -25,9 +25,7 @@ build my own blog by Next.js and Tailwind CSS
 
 # content design
 - Home
-- Posts
-- Tools
-- Learning
+- Portfolio
 - Tags
 - About
 
