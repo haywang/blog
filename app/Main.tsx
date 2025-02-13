@@ -9,13 +9,11 @@ interface PostsProps {
 export default function Home({ posts }: PostsProps) {
   const pageNumber = 1
   // Home page show 0 - POSTS_PER_PAGE posts
-  const initialDisplayPosts = posts.slice(
-    POSTS_PER_PAGE * (pageNumber - 1),
-    POSTS_PER_PAGE * pageNumber
-  )
+  const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE * pageNumber)
+  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
   const pagination = {
     currentPage: pageNumber,
-    totalPages: Math.ceil(posts.length / POSTS_PER_PAGE)
+    totalPages
   }
   // Home page don't show tags layout
   return (

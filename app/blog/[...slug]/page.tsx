@@ -61,7 +61,14 @@ export async function generateMetadata(props: {
   }
 }
 
-export default function Page({ params }: { params: { slug: string[] } }) {
+export const generateStaticParams = async () => {
+  return allBlogs.map((p) => ({
+    slug: p.slug.split('/').map((name) => decodeURI(name))
+  }))
+}
+
+export default async function Page(props: { params: { slug: string[] } }) {
+  const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
   const sortedCoreContents = allCoreContent(sortPosts(allBlogs))
   const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
@@ -71,6 +78,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 
   const pre = sortedCoreContents[postIndex + 1]
   const next = sortedCoreContents[postIndex - 1]
+  // console.log(pre, next)
   const post = allBlogs.find((p) => p.slug === slug) as Blog
   const authorList = post?.authors || ['default']
   const authorDetails = authorList.map((author) => {
@@ -78,6 +86,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
     return coreContent(authorResults as Authors)
   })
   const mainContent = coreContent(post)
+  // todo: need to learn, how does this code work
   const jsonLd = post.structuredData
   jsonLd['author'] = authorDetails.map((author) => {
     return {
