@@ -8,6 +8,7 @@ interface PostsProps {
 
 export default function Home({ posts }: PostsProps) {
   const pageNumber = 1
+  // Home page show 0 - POSTS_PER_PAGE posts
   const initialDisplayPosts = posts.slice(
     POSTS_PER_PAGE * (pageNumber - 1),
     POSTS_PER_PAGE * pageNumber
@@ -16,6 +17,7 @@ export default function Home({ posts }: PostsProps) {
     currentPage: pageNumber,
     totalPages: Math.ceil(posts.length / POSTS_PER_PAGE)
   }
+  // Home page don't show tags layout
   return (
     <ListLayout
       posts={posts}
