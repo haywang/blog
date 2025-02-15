@@ -1,16 +1,13 @@
 import { components } from '@/components/MDXComponents'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
-import {
-  sortPosts,
-  coreContent,
-  allCoreContent
-} from 'pliny/utils/contentlayer'
+import { coreContent } from 'pliny/utils/contentlayer'
 import { allBlogs, allAuthors } from 'contentlayer/generated'
 import type { Authors, Blog } from 'contentlayer/generated'
 import PostSimple from '@/layouts/PostSimple'
 import siteMeta from '@/data/siteMeta'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
+import { getSortedPosts } from '@/utils/contentlayer'
 
 const defaultLayout = 'PostSimple'
 const layouts = { PostSimple }
@@ -70,7 +67,7 @@ export const generateStaticParams = async () => {
 export default async function Page(props: { params: { slug: string[] } }) {
   const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
-  const sortedCoreContents = allCoreContent(sortPosts(allBlogs))
+  const sortedCoreContents = getSortedPosts()
   const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
   if (postIndex === -1) {
     return notFound()

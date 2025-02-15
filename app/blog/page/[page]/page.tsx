@@ -1,8 +1,8 @@
 import ListLayout from '@/layouts/ListLayout'
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
 import POSTS_PER_PAGE from '@/data/pageNumber'
 import { notFound } from 'next/navigation'
+import { getSortedPosts } from '@/utils/contentlayer'
 
 export const generateStaticParams = async () => {
   const totalPages = Math.ceil(allBlogs.length / POSTS_PER_PAGE)
@@ -17,7 +17,7 @@ export default async function Page(props: {
   console.log('props: ', props)
   // props: { params: { page: '1' }, searchParams: { key: val }}
   const params = await props.params
-  const posts = allCoreContent(sortPosts(allBlogs))
+  const posts = getSortedPosts()
   // get pageNumber from params's page props
   const pageNumber = parseInt(params.page as string)
   // get the show posts from the pageNumber
