@@ -14,7 +14,7 @@ export const generateStaticParams = async () => {
 export default async function Page(props: {
   params: Promise<{ page: string }>
 }) {
-  console.log('props: ', props)
+  // console.log('props: ', props)
   // props: { params: { page: '1' }, searchParams: { key: val }}
   const params = await props.params
   const posts = getSortedPosts()
