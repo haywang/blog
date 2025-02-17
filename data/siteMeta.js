@@ -5,7 +5,7 @@ const siteMeta = {
   description:
     "This is Austin's blog, share frontend development|career|personal ideas",
   siteUrl: 'https://www.austinfe.com',
-  socialBanner: `${BASE_PATH}/static/images/logo.png`,
+  socialBanner: `${BASE_PATH}/static/images/twitter-card.png`,
   headerTitle: "Austin's Blog",
   author: 'Austin',
   theme: 'system',
