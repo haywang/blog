@@ -1,0 +1,72 @@
+---
+title: How to Inspect an iOS Device
+date: '2025-2-23'
+tags: ['how-to']
+draft: false
+summary: A new year has begun, bringing new hopes and aspirations.
+layout: PostSimple
+---
+
+Last Thursday, a client reported an issue with recording on Safari. However, when I tried to inspect the webpage on Mobile Safari, I realized I didn’t have a Type-C cable in my bag. I couldn’t use the wireless inspection feature because enabling it for the first time requires a USB connection—something I hadn’t set up yet since I had recently bought this computer.
+
+There are three methods to inspect an iOS device:
+
+## 1. Using a USB Cable
+
+Before you can inspect your iPhone via a Mac, you need to enable Web Inspector on your device.
+
+**Step 1: Enable Web Inspector on iPhone**
+
+1. Open the **Settings** app.
+
+2. Go to **Safari** > **Advanced**.
+
+3. Enable the **Web Inspector** toggle.
+
+**Step 2: Set Up Safari on Mac**
+
+1. Open **Safari** on your Mac.
+
+2. Go to **Settings** (Preferences).
+
+3. Navigate to **Advanced** and check the box: **Show Develop menu in menu bar**.
+
+**Step 3: Connect Your iPhone via USB**
+
+1. Plug your iPhone into your Mac using a USB cable.
+
+2. When prompted, tap **Trust** on your iPhone to establish the connection.
+
+3. If a privacy dialog appears on your Mac and closes too quickly, you need to click it quickly to confirm access—it’s a bit tricky.
+
+**Step 4: Inspect Your Webpage**
+
+1. Click the **Develop** menu at the top of Safari.
+
+2. Your connected device should appear in the dropdown menu.
+
+3. Hover over it, and you’ll see a list of open web pages. Click on one to inspect it.
+
+## 2. Wireless Inspection
+
+Once you’ve successfully set up USB debugging, you can enable wireless debugging to inspect pages without a cable.
+
+1. At the bottom of the **Inspect Webpage** panel, click **Connect via Network**.
+
+2. Turn on the switch for **Wireless Debugging**.
+
+3. Ensure your iPhone and Mac are connected to the same WiFi network.
+
+4. Keep your iPhone unlocked while debugging.
+
+This method is very convenient when you don’t have a USB cable. Since I dislike frequently plugging and unplugging cables, I prefer using wireless debugging.
+
+## 3. Using vConsole
+
+[vConsole](https://github.com/Tencent/vConsole) is an open-source debugging tool developed by Tencent.
+
+It’s a lightweight, extendable frontend debugging tool for mobile web pages. You can integrate it into your website, and a vConsole icon will appear at the bottom-right corner of the screen. Clicking the icon will open a developer console, allowing you to inspect logs and debug issues directly from your phone.
+
+In my previous company, we used vConsole extensively in development environments.
+
+I hope this guide helps! If you found it useful, don’t hesitate to share it. 🚀
