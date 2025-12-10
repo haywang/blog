@@ -1,12 +1,6 @@
 'use client'
 
-import {
-  enableBodyScroll,
-  disableBodyScroll,
-  clearAllBodyScrollLocks
-} from 'body-scroll-lock'
-
-import { useState, useEffect, useRef, Fragment } from 'react'
+import { useState, Fragment } from 'react'
 
 import Menu from '@/data/menu.svg'
 import {
@@ -22,22 +16,11 @@ import Link from './Link'
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
 
-  const navRef = useRef(null)
-
   const onToggleNav = () => {
     setNavShow((status) => {
-      if (status) {
-        enableBodyScroll(navRef.current)
-      } else {
-        disableBodyScroll(navRef.current)
-      }
       return !status
     })
   }
-
-  useEffect(() => {
-    return clearAllBodyScrollLocks
-  })
 
   return (
     <>
@@ -48,8 +31,8 @@ const MobileNav = () => {
       >
         <Menu className="h-8 w-8 text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400" />
       </button>
-      <Transition appear show={navShow} as={Fragment} unmount={false}>
-        <Dialog as="div" onClose={onToggleNav} unmount={false}>
+      <Transition appear show={navShow} as={Fragment}>
+        <Dialog as="div" onClose={onToggleNav}>
           <TransitionChild
             as={Fragment}
             enter="ease-out duration-300"
@@ -58,9 +41,8 @@ const MobileNav = () => {
             leave="ease-in duration-200"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
-            unmount={false}
           >
-            <div className="fix inset-0 z-60 bg-black/25"></div>
+            <div className="fixed inset-0 z-60 bg-black/25" />
           </TransitionChild>
           <TransitionChild
             as={Fragment}
@@ -70,13 +52,9 @@ const MobileNav = () => {
             leave="transition ease-in duration-200 transform"
             leaveFrom="translate-x-0 opacity-95"
             leaveTo="translate-x-full opacity-0"
-            unmount={false}
           >
             <DialogPanel className="fixed left-0 top-0 z-70 h-full w-full bg-white opacity-95 duration-300 dark:bg-gray-950 dark:opacity-[0.98]">
-              <nav
-                ref={navRef}
-                className="mt-8 flex h-full basis-0 flex-col items-start overflow-y-auto pl-12 pt-2 text-left"
-              >
+              <nav className="mt-8 flex h-full basis-0 flex-col items-start overflow-y-auto pl-12 pt-2 text-left">
                 {headerNavLinks.map((link) => (
                   <Link
                     key={link.title}
